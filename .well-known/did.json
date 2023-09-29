@@ -1,0 +1,48 @@
+{
+    "id": "did:web:did.centauri.co.ke",
+    "@context": [
+      "https://www.w3.org/ns/did/v1",
+      {
+        "@base": "did:web:did.centauri.co.ke"
+      }
+    ],
+    "service": [
+      {
+        "id": "#linkeddomains",
+        "type": "LinkedDomains",
+        "serviceEndpoint": {
+          "origins": [
+            "https://did.centauri.co.ke/"
+          ]
+        }
+      },
+      {
+        "id": "#hub",
+        "type": "IdentityHub",
+        "serviceEndpoint": {
+          "instances": [
+            "https://hub.did.msidentity.com/v1.0/3ac00dca-78e9-47af-adf2-d841dd297416"
+          ]
+        }
+      }
+    ],
+    "verificationMethod": [
+      {
+        "id": "#4ef67682b2a54a258781028cbf43f525vcSigningKey-94db8",
+        "controller": "did:web:did.centauri.co.ke",
+        "type": "EcdsaSecp256k1VerificationKey2019",
+        "publicKeyJwk": {
+          "crv": "secp256k1",
+          "kty": "EC",
+          "x": "yDbS8jDX2AYwhdM2HXx6IfhhsOJkqv2UuFrIB3pMcUk",
+          "y": "7XXiflVM00xYMg6Y_C3kVarSDQx8Y-lkJ3CFOa-UYMI"
+        }
+      }
+    ],
+    "authentication": [
+      "#4ef67682b2a54a258781028cbf43f525vcSigningKey-94db8"
+    ],
+    "assertionMethod": [
+      "#4ef67682b2a54a258781028cbf43f525vcSigningKey-94db8"
+    ]
+  }
